@@ -1,5 +1,5 @@
 project("My Awesome Tested Project" C) 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.21)
 
 # Let's tell it a bit about our environment
 # Note: With this line, CTest does not find a compiled test
@@ -24,6 +24,9 @@ elseif(TARGET_GROUP STREQUAL test)
 
   # It also needs to understand we have code in source and test directories 
   add_subdirectory(test) 
+
+  # It should give verbose test output when a test fails
+  list(APPEND CMAKE_CTEST_ARGUMENTS "--output-on-failure")
 
 else() 
   message(FATAL_ERROR "I don't know the TARGET_GROUP you gave me!")
