@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.21)
 
 # Let's tell it a bit about our environment
 # Note: With this line, CTest does not find a compiled test
-# SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
 # We declare a variable to select what to build set
 SET(TARGET_GROUP production CACHE STRING "What Should I Build?")
