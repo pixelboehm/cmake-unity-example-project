@@ -20,7 +20,7 @@ elseif(TARGET_GROUP STREQUAL test)
   include(CTest)
 
   # Include Unity Dependency
-  add_subdirectory(unity) 
+  add_subdirectory(extern/unity) 
 
   # It also needs to understand we have code in source and test directories 
   add_subdirectory(test) 
